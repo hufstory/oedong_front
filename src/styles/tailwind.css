@@ -1,3 +1,9 @@
 @tailwind base;
+.font-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.font-neodgm-pro {
+  font-family: "NeoDunggeunmo Pro";
+}
 @tailwind components;
 @tailwind utilities;

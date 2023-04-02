@@ -6,7 +6,12 @@ module.exports = {
       "main-black": "#151414",
       white: "#FFFFFF",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Noto Sans KR"],
+        main: ["NeoDunggeunmo Pro"],
+      },
+    },
   },
   plugins: [],
 };
