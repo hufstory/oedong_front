@@ -7,6 +7,7 @@ module.exports = {
       white: "#FFFFFF",
       "footer-gray": "#2B2828",
       "text-gray": "#454242",
+      green: "#22C55E",
     },
     extend: {
       fontFamily: {
