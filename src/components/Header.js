@@ -12,7 +12,7 @@ const Header = () => {
             src={logo}
             alt="logo"
           />
-          <Link to="/enroll" className="text-white pl-[76px] text-[12px] ">
+          <Link to="/enroll" className="text-white pl-[70px] text-[12px] ">
             동아리 등록
           </Link>
           <Link to="/enroll" className="text-white pl-[15px] text-[12px]">
