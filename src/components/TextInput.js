@@ -4,7 +4,7 @@ const TextInput = (props) => {
       <label className="text-white text-[16px] font-main" htmlFor="text">
         {props.label}
       </label>
-      <div className="container w-[275px] h-[40px] mt-[7px] mx-auto flex flex-col items-start justify-start border-green border-2 bg-main-black">
+      <div className="container w-[275px] h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-start border-green border-2 bg-main-black">
         <div>
           <input
             type="text"
