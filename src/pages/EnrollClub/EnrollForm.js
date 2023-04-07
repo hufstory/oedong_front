@@ -14,6 +14,7 @@ const EnrollForm = () => {
       <CheckBox
         label="캠퍼스 구분"
         item={["서울캠퍼스", "글로벌캠퍼스", "상관없음"]}
+        showAnything={false}
       />
       <CheckBox
         label="동아리 구분"
@@ -23,8 +24,8 @@ const EnrollForm = () => {
           "연합동아리",
           "과 동아리",
           "학생 자치기구",
-          "기타",
         ]}
+        showAnything={true}
       />
       <CheckBox
         label="동아리 분야"
@@ -35,8 +36,8 @@ const EnrollForm = () => {
           "개인스포츠",
           "레저",
           "팀스포츠",
-          "기타",
         ]}
+        showAnything={true}
       />
       <TextInput label="동아리방 위치" />
       <TextInput label="회장 이름" />
