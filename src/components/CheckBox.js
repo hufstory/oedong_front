@@ -25,7 +25,7 @@ const CheckBox = (props) => {
   const secondCol = checkBoxItems.slice(Math.ceil(checkBoxItems.length / 2));
 
   return (
-    <div className="mt-[10px] mb-[10px]">
+    <div className="mt-[10px] mb-[20px]">
       <label className="text-white text-[16px] font-main" htmlFor="text">
         {props.label}
       </label>

@@ -10,7 +10,7 @@ const EnrollForm = () => {
         src={setimage}
         alt="setimage"
       />
-      <TextInput label="동아리 이름" />
+      <TextInput id="clubname" label="동아리 이름" maxLength="25" />
       <CheckBox
         label="캠퍼스 구분"
         item={["서울캠퍼스", "글로벌캠퍼스", "상관없음"]}
@@ -39,11 +39,11 @@ const EnrollForm = () => {
         ]}
         showAnything={true}
       />
-      <TextInput label="동아리방 위치" />
-      <TextInput label="회장 이름" />
-      <TextInput label="회장 학번 / 학과" />
-      <TextInput label="회장 전화번호" />
-      <TextInput label="동아리 간략한 소개" />
+      <TextInput id="location" label="동아리방 위치" maxLength="25" />
+      <TextInput id="mastername" label="회장 이름" maxLength="25" />
+      <TextInput id="masterinfo" label="회장 학번 / 학과" maxLength="25" />
+      <TextInput id="phone" label="회장 전화번호" maxLength="25" />
+      <TextInput id="intro" label="동아리 간략한 소개" maxLength="500" />
     </div>
   );
 };
