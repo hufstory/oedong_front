@@ -1,20 +1,46 @@
+import { useRef } from "react";
+
 const TextInput = (props) => {
+  let isLong = false;
+  if (props.maxLength > 25) {
+    isLong = true;
+  }
+
+  const textarea = useRef();
+  const handleResizeHeight = () => {
+    textarea.current.style.height = "auto";
+    textarea.current.style.height = textarea.current.scrollHeight + "px";
+  };
+
   return (
     <div>
       <label className="text-white text-[16px] font-main" htmlFor="text">
         {props.label}
       </label>
-      <div className="container w-[295px] min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
-        <div>
-          <input
-            type="text"
-            id={props.id}
-            className="ml-[16px] w-[240px] text-[14px] text-white focus: outline-none bg-main-black"
-            placeholder=""
-            maxLength={props.maxLength}
-          />
+      {isLong ? (
+        <div className="container w-[295px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
+          <div>
+            <textarea
+              ref={textarea}
+              onInput={handleResizeHeight}
+              rows={1}
+              className="ml-[16px] mt-[10px] mb-[5px] w-[260px] text-[14px] text-white focus: outline-none bg-main-black resize-none"
+            ></textarea>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="container w-[295px] min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
+          <div>
+            <input
+              type="text"
+              id={props.id}
+              className="ml-[16px] w-[240px] text-[14px] text-white focus: outline-none bg-main-black"
+              placeholder=""
+              maxLength={props.maxLength}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
