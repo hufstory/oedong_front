@@ -1,10 +1,20 @@
 import setimage from "../../assets/setimage.png";
 import TextInput from "../../components/TextInput";
 import CheckBox from "../../components/CheckBox";
+import Modal from "../../components/Modal";
+import { useState } from "react";
 
 const EnrollForm = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const onModalAlert = () => {
+    setOpenModal(!openModal);
+  };
+
   return (
     <div className="container w-[390px] mx-auto flex flex-col items-center justify-start bg-main-black">
+      {openModal && (
+        <Modal onOpenModal={onModalAlert} text="동아리를 개설하시겠습니까?" />
+      )}
       <img
         className="w-[253px] mt-[40px] mb-[45px]"
         src={setimage}
@@ -44,6 +54,13 @@ const EnrollForm = () => {
       <TextInput id="masterinfo" label="회장 학번 / 학과" maxLength="25" />
       <TextInput id="phone" label="회장 전화번호" maxLength="25" />
       <TextInput id="intro" label="동아리 간략한 소개" maxLength="500" />
+
+      <button
+        onClick={onModalAlert}
+        className="w-[295px] h-[50px] mb-[20px] bg-green font-main text-white"
+      >
+        동아리 등록
+      </button>
     </div>
   );
 };
