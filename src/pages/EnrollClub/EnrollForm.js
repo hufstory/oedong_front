@@ -1,7 +1,7 @@
 import setimage from "../../assets/setimage.png";
 import TextInput from "../../components/TextInput";
 import CheckBox from "../../components/CheckBox";
-import Modal from "../../components/Modal";
+import Modal from "../../components/Modal/Modal";
 import { useState } from "react";
 
 const EnrollForm = () => {
