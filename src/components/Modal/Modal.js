@@ -1,6 +1,14 @@
 import ModalPortal from "./ModalPortal";
+import { useEffect } from "react";
 
 const Modal = ({ onOpenModal, text }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <ModalPortal>
       <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-main-black bg-opacity-70">
