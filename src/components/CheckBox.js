@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const CheckBox = (props) => {
+  const [isChecked, setIsChecked] = useState(false);
+  const checkBoxListener = (event) => {
+    setIsChecked(event.target.checked);
+  };
+
   const checkBoxItems = props.item.map((checkBox) => (
     <div className="flex-row items-start justify-start">
       <div className="flex-row items-start justify-start mb-[5px]">
@@ -34,6 +41,7 @@ const CheckBox = (props) => {
           <div className="w-1/2">{firstCol}</div>
           <div className="w-1/2">{secondCol}</div>
         </div>
+        {/* showAnything : 기타 칸 표시 여부 */}
         {showAnything ? (
           <div>
             <input
@@ -41,6 +49,7 @@ const CheckBox = (props) => {
               className="form-checkbox text-green-500 rounded-full mr-[7px] relative"
               id="anything"
               value="anything"
+              onChange={checkBoxListener}
             />
             <label
               key="anything"
@@ -49,6 +58,18 @@ const CheckBox = (props) => {
             >
               기타
             </label>
+            {isChecked ? (
+              <div className="container w-[250px] min-h-[30px] mt-[7px] mx-auto items-start justify-center border-green border-2 bg-main-black">
+                <div>
+                  <input
+                    type="text"
+                    className="ml-[10px] w-[230px] text-[14px] text-white focus: outline-none bg-main-black"
+                    placeholder=""
+                    maxLength="20"
+                  />
+                </div>
+              </div>
+            ) : null}
           </div>
         ) : null}
       </div>
