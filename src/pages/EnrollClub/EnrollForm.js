@@ -1,6 +1,7 @@
 import setimage from "../../assets/setimage.png";
 import TextInput from "../../components/TextInput";
 import CheckBox from "../../components/CheckBox";
+import Button from "../../components/Button";
 
 const EnrollForm = () => {
   return (
@@ -44,6 +45,7 @@ const EnrollForm = () => {
       <TextInput id="masterinfo" label="회장 학번 / 학과" maxLength="25" />
       <TextInput id="phone" label="회장 전화번호" maxLength="25" />
       <TextInput id="intro" label="동아리 간략한 소개" maxLength="500" />
+      <Button name="동아리 등록" />
     </div>
   );
 };
