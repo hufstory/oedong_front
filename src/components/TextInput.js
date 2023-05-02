@@ -18,8 +18,8 @@ const TextInput = (props) => {
         {props.label}
       </label>
       {isLong ? (
-        <div className="container w-[295px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
-          <div>
+        <div className="container w-[329px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
+          <div></div>
             <textarea
               ref={textarea}
               onInput={handleResizeHeight}
@@ -29,7 +29,7 @@ const TextInput = (props) => {
           </div>
         </div>
       ) : (
-        <div className="container w-[295px] min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
+        <div className="container w-[329px] min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
           <div>
             <input
               type="text"
