@@ -11,14 +11,14 @@ const CheckBox = (props) => {
       <div className="flex-row items-start justify-start mb-[5px]">
         <input
           type="checkbox"
-          className="form-checkbox text-green-500 rounded-full mr-[7px] relative"
+          className="form-checkbox text-green-500 rounded-full mr-[7px] relative checked: accent-green"
           id={checkBox}
           value={checkBox}
         />
         <label
           key={checkBox}
           htmlFor={checkBox}
-          className="text-white text-[14px] font-main mr-[20px] top-[-2.5px] relative"
+          className="text-white text-[14px] font-main mr-[20px] top-[-2.5px] relative checked:accent-green"
         >
           {checkBox}
         </label>
@@ -27,6 +27,7 @@ const CheckBox = (props) => {
   ));
 
   const showAnything = props.showAnything;
+  const border = props.border;
 
   const firstCol = checkBoxItems.slice(0, Math.ceil(checkBoxItems.length / 2));
   const secondCol = checkBoxItems.slice(Math.ceil(checkBoxItems.length / 2));
@@ -36,8 +37,12 @@ const CheckBox = (props) => {
       <label className="text-white text-[16px] font-main" htmlFor="text">
         {props.label}
       </label>
-      <div className="w-[295px] min-h-[40px] mt-[7px] pl-[20px] pt-[15px] pb-[15px] flex flex-col items-start justify-center border-green border-2 bg-main-black">
-        <div className="w-[295px] flex flex-row items-start justify-center">
+      <div
+        className={`w-[329px] min-h-[40px] mt-[7px] pl-[20px] pt-[15px] pb-[15px] flex flex-col items-start justify-center ${
+          border ? "border-green border-2" : null
+        }  bg-main-black`}
+      >
+        <div className="w-[329px] flex flex-row items-start justify-center">
           <div className="w-1/2">{firstCol}</div>
           <div className="w-1/2">{secondCol}</div>
         </div>
@@ -46,7 +51,7 @@ const CheckBox = (props) => {
           <div>
             <input
               type="checkbox"
-              className="form-checkbox text-green-500 rounded-full mr-[7px] relative"
+              className="form-checkbox text-green-500 rounded-full mr-[7px] relative checked:accent-green"
               id="anything"
               value="anything"
               onChange={checkBoxListener}

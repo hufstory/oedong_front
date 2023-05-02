@@ -4,11 +4,11 @@ import success from "../../assets/enroll-success.png";
 
 const EnrollSuccess = () => {
   return (
-    <div className="container min-w-[390px] mx-auto flex flex-col items-center justify-center">
+    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center">
       <Header />
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col w-full items-center justify-center">
         <img
-          className="relative w-[390px] bg-main-black"
+          className="relative w-[395px] bg-main-black"
           src={success}
           alt="success"
         />
@@ -16,7 +16,6 @@ const EnrollSuccess = () => {
           ▶︎ 동아리 상세페이지 가기
         </button>
       </div>
-
       <Footer />
     </div>
   );

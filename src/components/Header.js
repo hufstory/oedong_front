@@ -5,7 +5,7 @@ import profile from "../assets/profile.png";
 const Header = () => {
   return (
     <header>
-      <div className="container mx-auto flex items-center w-[390px] h-20 bg-main-black">
+      <div className="container mx-auto flex items-center max-w-[395px] w-screen h-20 bg-main-black">
         <nav>
           <Link to="/">
             <img

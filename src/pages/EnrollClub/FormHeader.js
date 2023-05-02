@@ -2,7 +2,7 @@ import logo from "../../assets/logo.png";
 
 const FormHeader = () => {
   return (
-    <div className="container w-[390px] h-[50px] mx-auto flex flex-row items-center justify-center bg-main-black">
+    <div className="container max-w-[395px] w-screen h-[50px] mx-auto flex flex-row items-center justify-center bg-main-black">
       <img
         className="object-cover h-10 inline mr-[15px]"
         src={logo}

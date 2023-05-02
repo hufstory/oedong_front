@@ -2,7 +2,7 @@ import footerLogo from "../assets/footer-logo.png";
 
 const Footer = () => {
   return (
-    <div className="container w-[390px] h-[187px] mx-auto flex flex-col items-start justify-center bg-footer-gray">
+    <div className="container max-w-[395px] w-screen h-[187px] mx-auto flex flex-col items-start justify-center bg-footer-gray">
       <img className="w-[140px] ml-[36px]" src={footerLogo} alt="footer" />
       <p className="text-text-gray ml-[36px] mt-[9px] text-[12px]">
         ⓒ2023 HUFSTORY Project

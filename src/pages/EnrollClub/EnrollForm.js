@@ -11,7 +11,7 @@ const EnrollForm = () => {
   };
 
   return (
-    <div className="container w-[390px] mx-auto flex flex-col items-center justify-start bg-main-black">
+    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-start bg-main-black">
       {openModal && (
         <Modal onOpenModal={onModalAlert} text="동아리를 개설하시겠습니까?" />
       )}
@@ -21,10 +21,12 @@ const EnrollForm = () => {
         alt="setimage"
       />
       <TextInput id="clubname" label="동아리 이름" maxLength="25" />
+
       <CheckBox
         label="캠퍼스 구분"
         item={["서울캠퍼스", "글로벌캠퍼스", "상관없음"]}
         showAnything={false}
+        border={true}
       />
       <CheckBox
         label="동아리 구분"
@@ -36,6 +38,7 @@ const EnrollForm = () => {
           "학생 자치기구",
         ]}
         showAnything={true}
+        border={true}
       />
       <CheckBox
         label="동아리 분야"
@@ -48,6 +51,7 @@ const EnrollForm = () => {
           "팀스포츠",
         ]}
         showAnything={true}
+        border={true}
       />
       <TextInput id="location" label="동아리방 위치" maxLength="25" />
       <TextInput id="mastername" label="회장 이름" maxLength="25" />
