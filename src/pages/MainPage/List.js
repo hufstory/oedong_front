@@ -19,7 +19,7 @@ const List = () => {
   };
 
   return (
-    <div className="container w-[390px] h-[300px] mx-auto items-center justify-start mt-[21px]">
+    <div className="container max-w-[395px] w-screen h-[300px] mx-auto items-center justify-start mt-[21px]">
       <Slider {...setting} className="h-[280px]">
         <div className="bg-white h-[280px]" style={{ width: 300 }}>
           <h3>1</h3>

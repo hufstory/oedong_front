@@ -13,7 +13,11 @@ const Search = () => {
       </span>
       <Link to="/search">
         <button>
-          <AiOutlineSearch size="33" color="#22C55E" className="ml-[30px]" />
+          <AiOutlineSearch
+            size="33"
+            color="#22C55E"
+            className="ml-[30px] mt-[5px] justify-center items-center"
+          />
         </button>
       </Link>
     </div>

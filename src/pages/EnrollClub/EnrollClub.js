@@ -5,7 +5,7 @@ import EnrollForm from "./EnrollForm";
 
 const EnrollClub = () => {
   return (
-    <div className="container min-w-[390px] mx-auto flex flex-col items-center justify-center">
+    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center">
       <Header />
       <FormHeader />
       <EnrollForm />

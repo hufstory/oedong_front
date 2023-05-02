@@ -11,7 +11,7 @@ const EnrollForm = () => {
   };
 
   return (
-    <div className="container w-[390px] mx-auto flex flex-col items-center justify-start bg-main-black">
+    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-start bg-main-black">
       {openModal && (
         <Modal onOpenModal={onModalAlert} text="동아리를 개설하시겠습니까?" />
       )}

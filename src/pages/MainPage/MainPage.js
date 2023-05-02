@@ -5,10 +5,10 @@ import Footer from "../../components/Footer";
 
 const MainPage = () => {
   return (
-    <div className="container min-w-[390px] mx-auto flex flex-col items-center justify-center">
+    <div className="container min-h-screen max-w-[395px] w-full mx-auto flex flex-col items-center justify-center">
       <Header />
       <div>
-        <img className="w-[390px]" src={intro} alt="intro" />
+        <img className="" src={intro} alt="intro" />
       </div>
       <ClubList />
       <Footer />

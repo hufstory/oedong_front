@@ -4,7 +4,7 @@ import List from "./List";
 
 const ClubList = () => {
   return (
-    <div className="container w-[390px] h-[514px] mx-auto flex flex-col items-center justify-center bg-main-black">
+    <div className="container max-w-[395px] w-screen h-[514px] mx-auto flex flex-col items-center justify-center bg-main-black">
       <Search />
       <ListLabel />
       <List />
