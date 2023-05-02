@@ -19,7 +19,7 @@ const TextInput = (props) => {
       </label>
       {isLong ? (
         <div className="container w-[329px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border-2 bg-main-black">
-          <div></div>
+          <div>
             <textarea
               ref={textarea}
               onInput={handleResizeHeight}
