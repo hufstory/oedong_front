@@ -11,14 +11,14 @@ const CheckBox = (props) => {
       <div className="flex-row items-start justify-start mb-[5px]">
         <input
           type="checkbox"
-          className="form-checkbox text-green-500 rounded-full mr-[7px] relative"
+          className="form-checkbox text-green-500 rounded-full mr-[7px] relative checked: accent-green"
           id={checkBox}
           value={checkBox}
         />
         <label
           key={checkBox}
           htmlFor={checkBox}
-          className="text-white text-[14px] font-main mr-[20px] top-[-2.5px] relative"
+          className="text-white text-[14px] font-main mr-[20px] top-[-2.5px] relative checked:accent-green"
         >
           {checkBox}
         </label>
@@ -46,7 +46,7 @@ const CheckBox = (props) => {
           <div>
             <input
               type="checkbox"
-              className="form-checkbox text-green-500 rounded-full mr-[7px] relative"
+              className="form-checkbox text-green-500 rounded-full mr-[7px] relative checked:accent-green"
               id="anything"
               value="anything"
               onChange={checkBoxListener}
