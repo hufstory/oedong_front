@@ -22,13 +22,15 @@ const SearchClub = () => {
         </p>
         <p className="ml-[8px] font-main text-[16px] text-white inline">필터</p>
       </div>
-      <div className="w-full h-full flex justify-center items-center bg-main-black border-green border-2">
-        <CheckBox
-          label=""
-          item={["전체", "서울캠퍼스", "글로벌캠퍼스"]}
-          showAnything={false}
-          border={false}
-        />
+      <div className="w-full h-full flex justify-center items-center bg-main-black">
+        <div className="w-[335px] border-green border-2">
+          <CheckBox
+            label=""
+            item={["전체", "서울캠퍼스", "글로벌캠퍼스"]}
+            showAnything={false}
+            border={false}
+          />
+        </div>
       </div>
       <Footer />
     </div>
