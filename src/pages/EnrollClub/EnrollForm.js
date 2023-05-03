@@ -61,7 +61,7 @@ const EnrollForm = () => {
 
       <button
         onClick={onModalAlert}
-        className="w-[295px] h-[50px] mb-[20px] bg-green font-main text-white"
+        className="w-[329px] h-[50px] mb-[20px] bg-green font-main text-white"
       >
         동아리 등록
       </button>
