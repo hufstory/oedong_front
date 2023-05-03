@@ -1,20 +1,17 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Search from "../../components/Search";
-import CheckBox from "../../components/CheckBox";
+import Header from "../../../components/Header";
+import CheckBox from "../../../components/CheckBox";
+import Footer from "../../../components/Footer";
+import SMListItem from "./SMListItem";
 import { FaFilter } from "react-icons/fa";
 
-const SearchClub = () => {
+const ShowMore = () => {
   return (
     <div className="container min-h-screen max-w-[395px] w-full mx-auto flex flex-col items-center justify-center">
       <Header />
       <div className="w-full bg-main-black">
         <p className="font-main text-[20px] text-white mt-[25px] ml-[34px] mb-[23px]">
-          검색
+          동아리 목록
         </p>
-      </div>
-      <div className="w-full h-[65px] bg-main-black">
-        <Search />
       </div>
       <div className="w-full h-full pb-[0px] bg-main-black flex flex-row justify-start items-center">
         <p className="text-green ml-[34px] inline">
@@ -67,9 +64,10 @@ const SearchClub = () => {
           />
         </div>
       </div>
+      <SMListItem />
       <Footer />
     </div>
   );
 };
 
-export default SearchClub;
+export default ShowMore;
