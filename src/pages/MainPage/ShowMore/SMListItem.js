@@ -16,7 +16,7 @@ const SMListItem = (props) => {
           더보기
         </button>
       </div>
-      <div className="w-[395px] pt-[15px] h-[40px] bg-main-black">
+      <div className="w-[395px] pt-[20px] h-[40px] bg-main-black">
         <hr className="ml-[28px] mr-[28px] border-solid border-[0.5px] border-green" />
       </div>
     </div>
