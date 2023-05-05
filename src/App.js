@@ -4,6 +4,7 @@ import EnrollClub from "./pages/EnrollClub/EnrollClub";
 import EnrollSuccess from "./pages/EnrollClub/EnrollSuccess";
 import SearchClub from "./pages/SearchClub/SearchClub";
 import ShowMore from "./pages/MainPage/ShowMore/ShowMore";
+import AInfoMain from "./pages/ClubInfo/Admin/AInfoMain";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/enroll/success" element={<EnrollSuccess />} />
         <Route path="/search" element={<SearchClub />} />
         <Route path="/showmore" element={<ShowMore />} />
+        <Route path="/clubinfo/admin" element={<AInfoMain />} />
       </Routes>
     </Router>
   );

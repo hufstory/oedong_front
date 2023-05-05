@@ -1,6 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import success from "../../assets/enroll-success.png";
+import { Link } from "react-router-dom";
 
 const EnrollSuccess = () => {
   return (
@@ -12,9 +13,11 @@ const EnrollSuccess = () => {
           src={success}
           alt="success"
         />
-        <button className="absolute top-[535px] border-none hover:text-green text-white font-main text-[18px] mb-[10px]">
-          ▶︎ 동아리 상세페이지 가기
-        </button>
+        <Link to="/clubinfo/admin">
+          <button className="absolute top-[535px] left-[770px] border-none hover:text-green text-white font-main text-[18px] mb-[10px]">
+            ▶︎ 동아리 상세페이지 가기
+          </button>
+        </Link>
       </div>
       <Footer />
     </div>
