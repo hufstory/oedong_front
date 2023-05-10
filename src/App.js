@@ -5,10 +5,12 @@ import EnrollSuccess from "./pages/EnrollClub/EnrollSuccess";
 import SearchClub from "./pages/SearchClub/SearchClub";
 import ShowMore from "./pages/MainPage/ShowMore/ShowMore";
 import AInfoMain from "./pages/ClubInfo/Admin/AInfoMain";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   return (
     <Router>
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/enroll" element={<EnrollClub />} />
