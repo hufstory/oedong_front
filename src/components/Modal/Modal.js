@@ -19,14 +19,14 @@ const Modal = ({ onOpenModal, text }) => {
             <Link to="/enroll/success">
               <button
                 onClick={onOpenModal}
-                className="border-none hover:text-green text-white font-main text-[18px] block mb-[10px]"
+                className="border-none  hover:text-green text-white font-main text-[18px] block mb-[10px]"
               >
                 ▶︎ 네
               </button>
             </Link>
             <button
               onClick={onOpenModal}
-              className="border-none hover:text-green text-white font-main text-[18px] block"
+              className="border-none active:text-green hover:text-green text-white font-main text-[18px] block"
             >
               ▶︎ 아니오
             </button>

@@ -65,7 +65,13 @@ const ShowMore = () => {
         </div>
       </div>
       <SMListItem />
-
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
       <Footer />
     </div>
   );
