@@ -27,6 +27,14 @@ const AInfoMain = () => {
             동아리 소개 텍스트
           </p>
         </div>
+        <div className="container max-w-[395px] flex flex-col justify-center items-end bg-main-black">
+          <button className="w-[186px] h-[31px] mt-[15px] mr-[34px] bg-green text-white text-[13px] font-main">
+            동아리 정보 수정하기
+          </button>
+          <button className="w-[186px] h-[31px] mt-[10px] mr-[34px] bg-green text-white text-[13px] font-main">
+            동아리 지원 폼 만들기
+          </button>
+        </div>
       </div>
     </div>
   );
