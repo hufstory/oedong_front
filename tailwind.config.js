@@ -9,6 +9,7 @@ module.exports = {
       "text-gray": "#454242",
       green: "#22C55E",
       pink: "#e134a5",
+      magenta: "#EA33D0",
     },
     extend: {
       fontFamily: {
