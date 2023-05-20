@@ -7,6 +7,7 @@ import { useState, useRef } from "react";
 import { ko } from "date-fns/esm/locale";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import styled from "styled-components";
 
 const EnrollForm = () => {
   /* modal control */
@@ -31,6 +32,18 @@ const EnrollForm = () => {
   /* DatePicker */
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
+  const SDatePicker = styled(DatePicker)`
+    width: 131px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+    border 1px solid #22C55E;
+    background-color: #151414;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+  `;
 
   return (
     <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center bg-main-black">
@@ -66,27 +79,34 @@ const EnrollForm = () => {
       </div>
 
       <TextInput id="clubname" label="동아리 이름" maxLength="25" />
-      <div className="flex flex-row">
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          dateFormat="yy/MM/dd"
-          selectsStart
-          startDate={startDate}
-          endDate={endDate}
-          minDate={new Date()}
-          locale={ko}
-        />
-        <DatePicker
-          selected={endDate}
-          onChange={(date) => setEndDate(date)}
-          dateFormat="yy/MM/dd"
-          selectsEnd
-          startDate={startDate}
-          endDate={endDate}
-          minDate={startDate}
-          locale={ko}
-        />
+
+      <div className="w-[329px] flex flex-col items-start justify-center">
+        <label className="text-white text-[16px] font-main">모집날짜</label>
+        <div className="w-[329px] flex flex-row mt-[7px] mb-[7px] items-center justify-center">
+          <SDatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            dateFormat="yy/MM/dd"
+            selectsStart
+            startDate={startDate}
+            endDate={endDate}
+            minDate={new Date()}
+            locale={ko}
+          />
+          <div
+            className={"w-[90px] h-0 ml-[14px] mr-[14px] border border-green"}
+          />
+          <SDatePicker
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            dateFormat="yy/MM/dd"
+            selectsEnd
+            startDate={startDate}
+            endDate={endDate}
+            minDate={startDate}
+            locale={ko}
+          />
+        </div>
       </div>
 
       <CheckBox
