@@ -4,6 +4,9 @@ import TextInput from "../../components/TextInput";
 import CheckBox from "../../components/CheckBox";
 import Modal from "../../components/Modal/Modal";
 import { useState, useRef } from "react";
+import { ko } from "date-fns/esm/locale";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const EnrollForm = () => {
   /* modal control */
@@ -24,6 +27,10 @@ const EnrollForm = () => {
       setImgFile(reader.result);
     };
   };
+
+  /* DatePicker */
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
   return (
     <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center bg-main-black">
@@ -59,6 +66,28 @@ const EnrollForm = () => {
       </div>
 
       <TextInput id="clubname" label="동아리 이름" maxLength="25" />
+      <div className="flex flex-row">
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+          dateFormat="yy/MM/dd"
+          selectsStart
+          startDate={startDate}
+          endDate={endDate}
+          minDate={new Date()}
+          locale={ko}
+        />
+        <DatePicker
+          selected={endDate}
+          onChange={(date) => setEndDate(date)}
+          dateFormat="yy/MM/dd"
+          selectsEnd
+          startDate={startDate}
+          endDate={endDate}
+          minDate={startDate}
+          locale={ko}
+        />
+      </div>
 
       <CheckBox
         label="캠퍼스 구분"
