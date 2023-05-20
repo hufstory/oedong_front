@@ -18,7 +18,7 @@ const Header = (props) => {
       </Link>
       <div className="flex flex-row items-center justify-start bg-main-black">
         <div className="flex flex-col items-end justify-start bg-main-black">
-          <ShowAuth />
+          <ShowAuth isAdmin={false} />
           <div className="flex flex-row pt-[5px]">
             {location.pathname === "/" ? (
               <p
