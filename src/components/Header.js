@@ -11,7 +11,7 @@ const Header = (props) => {
     <div className="container mx-auto flex flex-row items-end justify-center max-w-[700px] h-[70px] mb-[15px] bg-main-black">
       <Link to="/">
         <img
-          className="object-cover h-[52px] inline ml-[10px]"
+          className="h-[50px] inline ml-[10px] mb-[2px]"
           src={logo}
           alt="logo"
         />
@@ -19,10 +19,10 @@ const Header = (props) => {
       <div className="flex flex-row items-center justify-start bg-main-black">
         <div className="flex flex-col items-end justify-start bg-main-black">
           <ShowAuth isAdmin={false} />
-          <div className="flex flex-row pt-[5px]">
+          <div className="flex flex-row pt-[5px] items-center">
             {location.pathname === "/" ? (
               <p
-                className={`text-magenta ml-[10px] hover:cursor-pointer inline ${
+                className={`text-magenta text-[11px] mt-[5px] ml-[10px] hover:cursor-pointer inline ${
                   props.showImage ? "rotate-180" : ""
                 }`}
               >

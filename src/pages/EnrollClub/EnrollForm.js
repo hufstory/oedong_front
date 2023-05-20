@@ -1,25 +1,63 @@
-import setimage from "../../assets/setimage.png";
+import clubimagedefault from "../../assets/clubimagedefault.png";
+import clubimagestar from "../../assets/clubimagestar.png";
 import TextInput from "../../components/TextInput";
 import CheckBox from "../../components/CheckBox";
 import Modal from "../../components/Modal/Modal";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const EnrollForm = () => {
+  /* modal control */
   const [openModal, setOpenModal] = useState(false);
   const onModalAlert = () => {
     setOpenModal(!openModal);
   };
 
+  /* img upload */
+  const [imgFile, setImgFile] = useState("");
+  const imgRef = useRef();
+
+  const onUploadImg = () => {
+    const file = imgRef.current.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setImgFile(reader.result);
+    };
+  };
+
   return (
-    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-start bg-main-black">
+    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center bg-main-black">
       {openModal && (
         <Modal onOpenModal={onModalAlert} text="동아리를 개설하시겠습니까?" />
       )}
-      <img
-        className="w-[253px] mt-[40px] mb-[45px]"
-        src={setimage}
-        alt="setimage"
-      />
+      <div className="max-w-[395px] flex flex-row items-start justify-start">
+        <label for="file">
+          {/* 이미지 클릭하면 파일 업로드되게 */}
+          <div className="ml-[70px] w-[232px] overflow-hidden rounded">
+            <img
+              className="w-[232px] mt-[40px] mb-[45px] object-cover"
+              src={imgFile ? imgFile : clubimagedefault}
+              alt="setimage"
+            />
+          </div>
+        </label>
+        <input
+          type="file"
+          name="file"
+          id="file"
+          className="hidden"
+          accept="image/*"
+          onChange={onUploadImg}
+          ref={imgRef}
+        />
+        <img
+          className="relative w-[70px] top-[10px] right-[40px]"
+          src={clubimagestar}
+          alt="star"
+        />
+        {/* 대표 사진 옆 별 장식 */}
+      </div>
+
       <TextInput id="clubname" label="동아리 이름" maxLength="25" />
 
       <CheckBox
