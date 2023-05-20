@@ -39,7 +39,7 @@ const CheckBox = (props) => {
       </label>
       <div
         className={`w-[329px] min-h-[40px] mt-[7px] pl-[20px] pt-[15px] pb-[15px] flex flex-col items-start justify-center ${
-          border ? "border-green border-2" : null
+          border ? "border-green border" : null
         }  bg-main-black`}
       >
         <div className="w-[329px] flex flex-row items-start justify-center">
