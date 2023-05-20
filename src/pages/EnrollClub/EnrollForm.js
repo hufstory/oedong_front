@@ -33,9 +33,9 @@ const EnrollForm = () => {
       <div className="max-w-[395px] flex flex-row items-start justify-start">
         <label for="file">
           {/* 이미지 클릭하면 파일 업로드되게 */}
-          <div className="ml-[70px] w-[232px] overflow-hidden rounded">
+          <div className="relative mt-[40px] mb-[45px] ml-[70px] w-[232px] h-[232px] overflow-hidden rounded-full">
             <img
-              className="w-[232px] mt-[40px] mb-[45px] object-cover"
+              className="absolute object-cover w-full h-full"
               src={imgFile ? imgFile : clubimagedefault}
               alt="setimage"
             />
