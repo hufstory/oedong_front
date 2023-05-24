@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../../components/Header";
 import intro from "../../assets/intro.png";
 import ClubList from "./ClubList";

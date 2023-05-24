@@ -1,3 +1,4 @@
+import React from "react";
 import clubimagedefault from "../../assets/clubimagedefault.png";
 import clubimagestar from "../../assets/clubimagestar.png";
 import TextInput from "../../components/TextInput";
@@ -48,7 +49,11 @@ const EnrollForm = () => {
   return (
     <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center bg-main-black">
       {openModal && (
-        <Modal onOpenModal={onModalAlert} text="동아리를 개설하시겠습니까?" />
+        <Modal
+          onOpenModal={onModalAlert}
+          text="동아리를 개설하시겠습니까?"
+          link="/enroll/success"
+        />
       )}
       <div className="max-w-[395px] flex flex-row items-start justify-start">
         <label for="file">
@@ -108,7 +113,6 @@ const EnrollForm = () => {
           />
         </div>
       </div>
-
       <CheckBox
         label="캠퍼스 구분"
         item={["서울캠퍼스", "글로벌캠퍼스", "상관없음"]}
@@ -141,10 +145,46 @@ const EnrollForm = () => {
         border={true}
       />
       <TextInput id="location" label="동아리방 위치" maxLength="25" />
+      <TextInput id="activities" label="주요 활동 (3가지)" maxLength="200" />
+
+      <div className="flex flex-row items-start justify-start mr-[245px]">
+        <label className="text-white text-[16px] font-main" htmlFor="text">
+          동아리 회비
+        </label>
+      </div>
+      <div className="container w-[329px] min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border bg-main-black">
+        <div className="mt-[10px] ml-[20px] flex flex-row items-start justify-center font-sans text-white text-[14px]">
+          <label>· 금액:</label>
+          <input
+            placeholder="금액 입력"
+            className="ml-[10px] w-[200px] bg-main-black outline-none border-none border-b-white"
+            type="text"
+          />
+        </div>
+        <div className="mt-[10px] ml-[20px] mb-[10px] flex flex-row items-start justify-center font-sans text-white text-[14px]">
+          <label>· 기간 단위:</label>
+          <input
+            placeholder="기간 단위 입력"
+            className="ml-[10px] w-[200px] bg-main-black outline-none border-none border-b-white"
+            type="text"
+          />
+        </div>
+      </div>
+      <TextInput
+        id="activity_term"
+        label="동아리 활동 단위"
+        placeholder="ex. 일주일에 한 번 X요일"
+        maxLength="25"
+      />
       <TextInput id="mastername" label="회장 이름" maxLength="25" />
       <TextInput id="masterinfo" label="회장 학번 / 학과" maxLength="25" />
       <TextInput id="phone" label="회장 전화번호" maxLength="25" />
-      <TextInput id="intro" label="동아리 간략한 소개" maxLength="500" />
+      <TextInput id="intro1" label="바라는 인재상 (1~3줄)" maxLength="400" />
+      <TextInput
+        id="intro2"
+        label="동아리 간략한 소개 (1~3줄)"
+        maxLength="400"
+      />
 
       <button
         onClick={onModalAlert}

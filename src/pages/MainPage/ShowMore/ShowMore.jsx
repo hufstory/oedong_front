@@ -1,26 +1,25 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Search from "../../components/Search";
-import CheckBox from "../../components/CheckBox";
+import React from "react";
+import Header from "../../../components/Header";
+import CheckBox from "../../../components/CheckBox";
+import Footer from "../../../components/Footer";
+import SMListItem from "./SMListItem";
 import { FaFilter } from "react-icons/fa";
 import { IoTriangleSharp } from "react-icons/io5";
 import { useState } from "react";
 
-const SearchClub = () => {
+const ShowMore = () => {
   const [showFilter, setShowFilter] = useState(false);
   const showFilterHandler = () => {
     setShowFilter(!showFilter);
   };
+
   return (
-    <div className="container  max-w-[395px] w-full mx-auto flex flex-col items-center justify-center">
+    <div className="container max-w-[395px] w-full mx-auto flex flex-col items-center justify-center">
       <Header />
       <div className="w-full bg-main-black">
         <p className="font-main text-[20px] text-white mt-[25px] ml-[34px] mb-[23px]">
-          검색
+          동아리 목록
         </p>
-      </div>
-      <div className="w-full h-[65px] bg-main-black">
-        <Search />
       </div>
       <div
         className={`w-full h-full ${
@@ -87,9 +86,17 @@ const SearchClub = () => {
         </div>
       ) : null}
 
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
+      <SMListItem />
       <Footer />
     </div>
   );
 };
 
-export default SearchClub;
+export default ShowMore;

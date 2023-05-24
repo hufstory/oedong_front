@@ -1,3 +1,4 @@
+import React from "react";
 import clubimg from "../../../assets/clubimg.png";
 
 const SMListItem = (props) => {
