@@ -12,7 +12,7 @@ const Modal = ({ onOpenModal, text }) => {
 
   return (
     <ModalPortal>
-      <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-main-black bg-opacity-70">
+      <div className="fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-main-black bg-opacity-70">
         <div className="container w-[320px] h-[200px] flex flex-col items-center justify-center bg-main-black border-green border-2">
           <div className="items-start">
             <p className="font-main text-[18px] mb-[10px] text-white">{text}</p>
