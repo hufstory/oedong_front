@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import profile from "../assets/profile.png";
-import ShowAuth from "./ShowAuth.js";
+import ShowAuth from "./ShowAuth";
 import { IoTriangleSharp } from "react-icons/io5";
 
 const Header = (props) => {
