@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 import EnrollClub from "./pages/EnrollClub/EnrollClub";
@@ -6,6 +7,8 @@ import SearchClub from "./pages/SearchClub/SearchClub";
 import ShowMore from "./pages/MainPage/ShowMore/ShowMore";
 import AInfoMain from "./pages/ClubInfo/Admin/AInfoMain";
 import ScrollTop from "./components/ScrollTop";
+import EditClubInfo from "./pages/ClubInfo/Admin/EditClubInfo/EditClubInfo";
+import EditSuccess from "./pages/ClubInfo/Admin/EditClubInfo/EditSuccess";
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
         <Route path="/search" element={<SearchClub />} />
         <Route path="/showmore" element={<ShowMore />} />
         <Route path="/clubinfo/admin" element={<AInfoMain />} />
+        <Route path="/clubinfo/admin/edit" element={<EditClubInfo />} />
+        <Route path="/clubinfo/admin/edit/success" element={<EditSuccess />} />
       </Routes>
     </Router>
   );

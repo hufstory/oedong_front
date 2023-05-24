@@ -1,3 +1,4 @@
+import React from "react";
 import smallsublogo from "../../assets/smallsublogo.png";
 
 const FormHeader = () => {

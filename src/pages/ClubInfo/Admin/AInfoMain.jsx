@@ -1,6 +1,8 @@
+import React from "react";
 import Header from "../../../components/Header";
 import clubprofile from "../../../assets/clubprofile.png";
 import description from "../../../assets/description.png";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const AInfoMain = () => {
@@ -54,9 +56,12 @@ const AInfoMain = () => {
               수정하기 ▶︎
             </button>
           </div>
-          <button className="w-[186px] h-[31px] mt-[20px] bg-green text-white text-[13px] font-main">
-            동아리 정보 수정하기
-          </button>
+          <Link to="/clubinfo/admin/edit">
+            <button className="w-[186px] h-[31px] mt-[20px] bg-green text-white text-[13px] font-main">
+              동아리 정보 수정하기
+            </button>
+          </Link>
+
           <button className="w-[186px] h-[31px] mt-[10px] bg-green text-white text-[13px] font-main">
             동아리 지원 폼 만들기
           </button>

@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import success from "../../assets/enroll-success.png";
+import Header from "../../../../components/Header";
+import Footer from "../../../../components/Footer";
+import success from "../../../../assets/edit-success.png";
 import { Link } from "react-router-dom";
 
 const EnrollSuccess = () => {

@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../../../components/Header";
 import CheckBox from "../../../components/CheckBox";
 import Footer from "../../../components/Footer";

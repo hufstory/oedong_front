@@ -1,3 +1,4 @@
+import React from "react";
 // props.isAdmin : 운영자인지 아닌지 판단, bool type
 const ShowAuth = (props) => {
   return (
