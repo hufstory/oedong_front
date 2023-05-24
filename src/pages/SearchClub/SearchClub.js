@@ -12,7 +12,7 @@ const SearchClub = () => {
     setShowFilter(!showFilter);
   };
   return (
-    <div className="container  max-w-[395px] w-full mx-auto flex flex-col items-center justify-center">
+    <div className="container max-w-[395px] w-full mx-auto flex flex-col items-center justify-center">
       <Header />
       <div className="w-full bg-main-black">
         <p className="font-main text-[20px] text-white mt-[25px] ml-[34px] mb-[23px]">
