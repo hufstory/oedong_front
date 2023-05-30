@@ -1,16 +1,16 @@
 import React from "react";
-import clubimagedefault from "../../assets/clubimagedefault.png";
-import clubimagestar from "../../assets/clubimagestar.png";
-import TextInput from "../../components/TextInput";
-import CheckBox from "../../components/CheckBox";
-import Modal from "../../components/Modal/Modal";
+import clubimagedefault from "../../../../assets/clubimagedefault.png";
+import clubimagestar from "../../../../assets/clubimagestar.png";
+import TextInput from "../../../../components/TextInput";
+import CheckBox from "../../../../components/CheckBox";
+import Modal from "../../../../components/Modal/Modal";
 import { useState, useRef } from "react";
 import { ko } from "date-fns/esm/locale";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styled from "styled-components";
 
-const EnrollForm = () => {
+const EditClubForm = () => {
   /* modal control */
   const [openModal, setOpenModal] = useState(false);
   const onModalAlert = () => {
@@ -51,8 +51,8 @@ const EnrollForm = () => {
       {openModal && (
         <Modal
           onOpenModal={onModalAlert}
-          text="동아리를 개설하시겠습니까?"
-          link="/enroll/success"
+          text="동아리 정보를 수정하시겠습니까?"
+          link="clubinfo/admin/edit/success"
         />
       )}
       <div className="max-w-[395px] flex flex-row items-start justify-start">
@@ -84,7 +84,6 @@ const EnrollForm = () => {
       </div>
 
       <TextInput id="clubname" label="동아리 이름" maxLength="25" />
-
       <div className="w-[329px] flex flex-col items-start justify-center">
         <label className="text-white text-[16px] font-main">모집날짜</label>
         <div className="w-[329px] flex flex-row mt-[7px] mb-[7px] items-center justify-center">
@@ -190,10 +189,10 @@ const EnrollForm = () => {
         onClick={onModalAlert}
         className="w-[329px] h-[50px] mb-[20px] bg-green font-main text-white"
       >
-        동아리 등록
+        수정하기
       </button>
     </div>
   );
 };
 
-export default EnrollForm;
+export default EditClubForm;

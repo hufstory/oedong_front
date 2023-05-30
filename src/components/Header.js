@@ -1,7 +1,8 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import profile from "../assets/profile.png";
-import ShowAuth from "./ShowAuth.js";
+import ShowAuth from "./ShowAuth";
 import { IoTriangleSharp } from "react-icons/io5";
 
 const Header = (props) => {
@@ -11,18 +12,18 @@ const Header = (props) => {
     <div className="container mx-auto flex flex-row items-end justify-center max-w-[700px] h-[70px] mb-[15px] bg-main-black">
       <Link to="/">
         <img
-          className="object-cover h-[52px] inline ml-[10px]"
+          className="h-[50px] inline ml-[10px] mb-[2px]"
           src={logo}
           alt="logo"
         />
       </Link>
       <div className="flex flex-row items-center justify-start bg-main-black">
         <div className="flex flex-col items-end justify-start bg-main-black">
-          <ShowAuth />
-          <div className="flex flex-row pt-[5px]">
+          <ShowAuth isAdmin={false} />
+          <div className="flex flex-row pt-[5px] items-center">
             {location.pathname === "/" ? (
               <p
-                className={`text-magenta ml-[10px] hover:cursor-pointer inline ${
+                className={`text-magenta text-[11px] mt-[5px] ml-[10px] hover:cursor-pointer inline ${
                   props.showImage ? "rotate-180" : ""
                 }`}
               >
@@ -40,11 +41,13 @@ const Header = (props) => {
             </Link>
           </div>
         </div>
-        <img
-          className="object-cover h-10 inline pl-[20px]"
-          src={profile}
-          alt="profile"
-        />
+        <Link to="/clubinfo/admin">
+          <img
+            className="object-cover h-10 inline pl-[20px]"
+            src={profile}
+            alt="profile"
+          />
+        </Link>
       </div>
     </div>
   );
