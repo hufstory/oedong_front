@@ -9,6 +9,7 @@ import AInfoMain from "./pages/ClubInfo/Admin/AInfoMain";
 import ScrollTop from "./components/ScrollTop";
 import EditClubInfo from "./pages/ClubInfo/Admin/EditClubInfo/EditClubInfo";
 import EditSuccess from "./pages/ClubInfo/Admin/EditClubInfo/EditSuccess";
+import MyPage from "./pages/MyPage/MyPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/clubinfo/admin" element={<AInfoMain />} />
         <Route path="/clubinfo/admin/edit" element={<EditClubInfo />} />
         <Route path="/clubinfo/admin/edit/success" element={<EditSuccess />} />
+        <Route path="/my" element={<MyPage />} />
       </Routes>
     </Router>
   );
