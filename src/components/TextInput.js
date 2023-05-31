@@ -7,6 +7,11 @@ const TextInput = (props) => {
     isLong = true;
   }
 
+  let setWidth = false;
+  if (props.width) {
+    setWidth = true;
+  }
+
   const textarea = useRef();
   const handleResizeHeight = () => {
     textarea.current.style.height = "auto";
@@ -19,7 +24,11 @@ const TextInput = (props) => {
         {props.label}
       </label>
       {isLong ? (
-        <div className="container w-[329px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border bg-main-black">
+        <div
+          className={`container ${
+            setWidth ? `w-[${props.width}]` : "w-[329px]"
+          } mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border bg-main-black`}
+        >
           <div>
             <textarea
               ref={textarea}
@@ -30,7 +39,11 @@ const TextInput = (props) => {
           </div>
         </div>
       ) : (
-        <div className="container w-[329px] min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border bg-main-black">
+        <div
+          className={`container ${
+            setWidth ? `w-[${props.width}]` : "w-[329px]"
+          } min-h-[40px] mt-[7px] mb-[22px] mx-auto flex flex-col items-start justify-center border-green border bg-main-black`}
+        >
           <div>
             <input
               type="text"

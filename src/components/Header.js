@@ -29,7 +29,9 @@ const Header = (props) => {
               >
                 <IoTriangleSharp onClick={props.handler} />
               </p>
-            ) : null}
+            ) : (
+              <p className="ml-[20px]" />
+            )}
             <Link to="/enroll" className="text-white pl-[50px] text-[12px] ">
               동아리 등록
             </Link>

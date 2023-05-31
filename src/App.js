@@ -10,6 +10,8 @@ import ScrollTop from "./components/ScrollTop";
 import EditClubInfo from "./pages/ClubInfo/Admin/EditClubInfo/EditClubInfo";
 import EditSuccess from "./pages/ClubInfo/Admin/EditClubInfo/EditSuccess";
 import MyPage from "./pages/MyPage/MyPage";
+import MakeJoinForm from "./pages/ClubInfo/Admin/MakeJoinForm/MakeJoinForm";
+import MakeSuccess from "./pages/ClubInfo/Admin/MakeJoinForm/MakeSuccess";
 
 function App() {
   return (
@@ -24,6 +26,11 @@ function App() {
         <Route path="/clubinfo/admin" element={<AInfoMain />} />
         <Route path="/clubinfo/admin/edit" element={<EditClubInfo />} />
         <Route path="/clubinfo/admin/edit/success" element={<EditSuccess />} />
+        <Route path="/clubinfo/admin/form" element={<MakeJoinForm />} />
+        <Route
+          path="/clubinfo/admin/form/createsuccess"
+          element={<MakeSuccess />}
+        />
         <Route path="/my" element={<MyPage />} />
       </Routes>
     </Router>
