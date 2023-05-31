@@ -47,7 +47,7 @@ const EnrollForm = () => {
   `;
 
   return (
-    <div className="container max-w-[395px] w-screen mx-auto flex flex-col items-center justify-center bg-main-black">
+    <div className="container min-w-[395px] w-screen mx-auto flex flex-col items-center justify-center bg-main-black">
       {openModal && (
         <Modal
           onOpenModal={onModalAlert}

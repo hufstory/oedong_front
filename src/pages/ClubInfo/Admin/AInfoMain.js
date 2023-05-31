@@ -61,10 +61,11 @@ const AInfoMain = () => {
               동아리 정보 수정하기
             </button>
           </Link>
-
-          <button className="w-[186px] h-[31px] mt-[10px] bg-green text-white text-[13px] font-main">
-            동아리 지원 폼 만들기
-          </button>
+          <Link to="/clubinfo/admin/form">
+            <button className="w-[186px] h-[31px] mt-[10px] bg-green text-white text-[13px] font-main">
+              동아리 지원 폼 만들기
+            </button>
+          </Link>
         </div>
       </div>
     </div>
